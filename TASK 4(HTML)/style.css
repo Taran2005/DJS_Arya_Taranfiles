@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FDF0D5;
+    color: #003049;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #003049;
+    color: #FDF0D5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav a {
+    color: #FDF0D5;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav form {
+    display: flex;
+}
+
+nav input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+nav button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #C1121F;
+    color: #FDF0D5;
+    border-radius: 0 5px 5px 0;
+}
+
+section #about-us {
+    padding: 20px;
+    background-color: #669BBC;
+    color: #003049;
+}
+
+section #about-us h2 {
+    color: #780000;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 60%;
+    margin: 20px auto;
+    border: 5px solid #003049;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mySlides {
+    display: none;
+    text-align: center;
+}
+
+.mySlides img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.fade {
+    animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0.4} 
+    to {opacity: 1}
+}
+
+#contact {
+    padding: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-top: 10px;
+    color: #003049;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #003049;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #C1121F;
+    color: #FDF0D5;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.social-links {
+    text-align: center;
+    padding: 20px;
+    background-color: #669BBC;
+}
+
+.social-links a {
+    margin: 0 10px;
+}
+
+.social-links img {
+    width: 30px;
+}
+
+footer {
+    background-color: #003049;
+    color: #FDF0D5;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+#our-services {
+    padding: 20px;
+    background-color: #780000;
+    color: #FDF0D5;
+    text-align: center;
+}
+
+#our-services h2 {
+    color: #FDF0D5;
+    margin-bottom: 20px;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service {
+    background-color: #C1121F;
+    color: #FDF0D5;
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(50% - 40px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.service h3 {
+    margin-top: 0;
+    color: #FDF0D5;
+}
+
+.service p {
+    color: #FDF0D5;
+}

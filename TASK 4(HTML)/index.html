@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="#about-us">About Us</a>
+        <a href="#contact">Contact Us</a>
+        <form action="#" method="GET">
+            <input type="text" name="search" placeholder="Search...">
+            <button type="submit">Search</button>
+        </form>
+    </nav>
+    <hr>
+
+    <section id="about-us">
+        <h2>About Us</h2>
+        <p>Welcome to Car Wash!
+
+            At Car Wash, we are passionate about making your vehicle look its absolute best. Established in
+            1996, our mission has always been to provide top-notch car detailing services that exceed our customers'
+            expectations. We understand that your vehicle is more than just a mode of transportation – it's a reflection
+            of your personality and style..</p>
+    </section>
+
+    <hr>
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="images/1.jpg">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/2.jpg">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/3.png">
+        </div>
+
+    </div>
+
+    <section id="our-services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div class="service">
+                <h3>Exterior Wash</h3>
+                <p>Keep your car looking brand new with our comprehensive exterior wash services. We use the best products to ensure a spotless shine.</p>
+            </div>
+            <div class="service">
+                <h3>Interior Detailing</h3>
+                <p>Our interior detailing service ensures your car's interior is clean, comfortable, and looking great. We take care of every detail, so you don't have to.</p>
+            </div>
+            <div class="service">
+                <h3>Wax & Polish</h3>
+                <p>Protect your car's paint with our professional wax and polish service. It adds a layer of protection and gives your car a beautiful shine.</p>
+            </div>
+            <div class="service">
+                <h3>Tire & Wheel Cleaning</h3>
+                <p>Get your tires and wheels looking like new with our thorough cleaning services. We remove all dirt, grime, and brake dust.</p>
+            </div>
+        </div>
+    </section>
+    
+    <hr>
+
+    <div id="contact">
+        <h1>Contact Us</h1>
+        <form class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="7" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <hr>
+
+    <div class="social-links">
+        <a href="https://www.facebook.com" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+        <a href="https://www.twitter.com" target="_blank"><img src="twitter.png" alt="Twitter"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+    </div>
+
+    <footer>
+        &copy; 2024 My Website. All rights reserved.
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000);
+        }
+    </script>
+
+</body>
+
+</html>
