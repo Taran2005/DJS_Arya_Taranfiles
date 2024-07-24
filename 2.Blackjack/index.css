@@ -1,6 +1,7 @@
+
+
 body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
-    background-color: red;
+    background-color: #5e46e7;
     background-size: cover;
     font-weight: bold;
     color: white;
@@ -8,17 +9,18 @@ body {
 }
 
 h1 {
-    color: goldenrod;
+    color: rgb(215, 70, 240);
 }
 
 #message-el {
     font-style: italic;
 }
 
+
 button {
-    color: #bb0da7;
+    color: #b4d769;
     width: 150px;
-    background: rgb(12, 136, 245);
+    background: rgb(218, 32, 144);
     padding-top: 5px;
     padding-bottom: 5px;
     font-weight: bold;

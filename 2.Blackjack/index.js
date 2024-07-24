@@ -1,55 +1,47 @@
 let deck = []
 let total = 0
-let hasBlackJack = false
-let isAlive = false
-let message = ""
-let messageEl = document.getElementById("message-el")
-let totalEl = document.getElementById("total-el")
-let deckEl = document.getElementById("deck-el")
+let wonBlackJack = false
+let playerAlive = true
+let messageElement = document.getElementById("message-el")
+let totalElement = document.getElementById("sum-el")
+let deckElement = document.getElementById("cards-el")
 
-function getRandomCard() {
-    let randomNumber = Math.floor( Math.random()*13 ) + 1
-    if (randomNumber > 10) {
-        return 10
-    } else if (randomNumber === 1) {
-        return 11
-    } else {
-        return randomNumber
-    }
+document.getElementById('newCard').style.visibility = 'hidden';
+
+function rand() {
+    return Math.floor(Math.random() * 13) + 1
 }
 
 function startGame() {
-    isAlive = true
-    let firstCard = getRandomCard()
-    let secondCard = getRandomCard()
-    deck = [firstCard, secondCard]
-    total = firstCard + secondCard
+    deck = []
+    deck = [rand(), rand()]
+    total = deck[0] + deck[1]
+    playerAlive = true
+    wonBlackJack = false
+    document.getElementById('newCard').style.visibility = 'visible';
     renderGame()
 }
 
 function renderGame() {
-    deckEl.textContent = "Deck: "
-    for (let i = 0; i < deck.length; i++) {
-        deckEl.textContent += deck[i] + " "
-    }
-    
-    totalEl.textContent = "Total: " + total
+    deckElement.textContent = "Cards: " + deck.join(" ")
+    sumEl.textContent = "Sum: " + total
     if (total <= 20) {
-        message = "Do you want to draw a new card?"
+        messageElement.textContent = "draw a new card?"
     } else if (total === 21) {
-        message = "You've got Blackjack!"
-        hasBlackJack = true
+        messageElement.textContent = "Blackjack!"
+        wonBlackJack = true
     } else {
-        message = "You're out of the game!"
-        isAlive = false
+        messageElement.textContent = "You're out!"
+        playerAlive = false
+        document.getElementById('newCard').style.visibility = 'hidden';
     }
-    messageEl.textContent = message
 }
 
-
 function newCard() {
-    let card = getRandomCard()
-    total += card
-    deck.push(card)
-    renderGame()
+    if (playerAlive && !wonBlackJack) {
+        let card = rand()
+        total += card
+        deck.push(card)
+        renderGame()
+    }
 }
