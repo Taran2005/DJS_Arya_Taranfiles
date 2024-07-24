@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #418193;
+    margin-bottom: 4px;
+}
+
+button {
+    background: #657fcf;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+}
+
+ul{
+    margin: 0.5rem 0rem;
+    padding: 0.5rem 0rem;
+}
+
+li{
+    font-size: 1rem;
+    padding: 0.3rem 0rem;
+}
+
+li  a{
+    color: rgb(178, 26, 145);
+}
